@@ -1,13 +1,15 @@
 .options{
     display:flex;
-    gap:30px;
+    gap:10px;
     justify-content: center;
+    align-items: center;
     padding: 20px 10px;
-    width: 70vw;
+    width: 90vw;
     margin: auto;
 }
 
-.options input, .options select{
+.options>input, .options>select{
+    padding: 10px;
     flex-grow: 1;
     text-align: center;
 }
@@ -41,4 +43,14 @@
 #active-cell{
     background-color: #ededed;
     padding: 10px;
+}
+
+.hidden-input{
+    width: 0px;
+    height: 0px;
+    border: none;
+}
+
+.hidden-input:checked + label{
+    background-color: #ededed;
 }

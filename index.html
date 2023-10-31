@@ -13,35 +13,131 @@
   </head>
   <body>
     <section class="tools">
-      <div class="options">
-        <select name="fontfamily" id="fontfamily">
-          <option value="sans">Sans pro</option>
+      <form class="options" onchange="onFormChange()">
+        <select name="fontFamily" id="fontfamily">
+          <option value="sans">Default (Arial)</option>
           <option value="monospace">MonoSpace</option>
           <option value="sans-serif">Sans Serif</option>
         </select>
         <input
           type="number"
-          name="fontsize"
+          name="fontSize"
           min="8"
           max="24"
           value="16"
           id="fontsize"
         />
-        <span class="material-icons option-btn">format_color_text</span>
-        <span class="material-icons option-btn">format_color_fill</span>
-        <span class="material-icons option-btn"> format_bold </span>
-        <span class="material-icons option-btn">format_italic</span>
-        <span class="material-icons option-btn">format_underlined</span>
-        <span class="material-icons option-btn">format_align_left</span>
-        <span class="material-icons option-btn">format_align_center</span>
-        <span class="material-icons option-btn">format_align_right</span>
-      </div>
+        <div>
+          <input
+            type="color"
+            name="textColor"
+            id="textcolor"
+            class="hidden-input"
+            value="#000000"
+          />
+          <label for="textcolor" class="material-icons option-btn"
+            >format_color_text</label
+          >
+        </div>
+        <div>
+          <input
+            type="color"
+            name="bgColor"
+            id="bgcolor"
+            class="hidden-input"
+            value="#ffffff"
+          />
+          <label for="bgcolor" class="material-icons option-btn"
+            >format_color_fill</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="bold" class="hidden-input" name="bold" />
+          <label for="bold" class="material-icons option-btn">
+            format_bold
+          </label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="italic"
+            class="hidden-input"
+            name="italic"
+          />
+          <label for="italic" class="material-icons option-btn" name="italic"
+            >format_italic</label
+          >
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="strikethrough"
+            class="hidden-input"
+            name="strikethrough"
+          />
+          <label
+            for="strikethrough"
+            class="material-icons option-btn"
+            name="strikethrough"
+            >strikethrough_s</label
+          >
+        </div>
+        <!-- <div>
+          <input
+            type="checkbox"
+            id="underline"
+            class="hidden-input"
+            name="underline"
+          />
+          <label for="underline" class="material-icons option-btn" name="underline"
+            >format_underlined</label
+          >
+        </div> -->
+        <div>
+          <input
+            type="radio"
+            id="left"
+            class="hidden-input"
+            name="textAlign"
+            value="left"
+            checked
+          />
+          <label for="left" class="material-icons option-btn"
+            >format_align_left</label
+          >
+          <input
+            type="radio"
+            id="center"
+            class="hidden-input"
+            name="textAlign"
+            value="center"
+          />
+          <label for="center" class="material-icons option-btn"
+            >format_align_center</label
+          >
+          <input
+            type="radio"
+            id="right"
+            class="hidden-input"
+            name="textAlign"
+            value="right"
+          />
+          <label for="right" class="material-icons option-btn"
+            >format_align_right</label
+          >
+        </div>
+        <button type="button" class="material-icons" onclick="exportData()">
+          cloud_upload
+        </button>
+        <button type="button" class="material-icons">cloud_download</button>
+      </form>
       <div class="bottom-section">
         <div id="active-cell">null</div>
         <input
           oninput="onChangeFontSize()"
+          type="text"
           class="expression"
-          placeholder="f(x)"
+          placeholder=" f(x) "
         />
       </div>
     </section>
@@ -56,5 +152,6 @@
 
     <script src="./options.js"></script>
     <script src="./script.js"></script>
+    <script src="./import-export.js"></script>
   </body>
 </html>

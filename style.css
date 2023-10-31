@@ -5,7 +5,7 @@
 
 #container{
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
     overflow: scroll;
 }
 
@@ -15,6 +15,7 @@
     top: 0px;
     background-color: white;
     width: fit-content;
+    text-decoration: ;
 }
 
 .bottom{
