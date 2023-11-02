@@ -15,9 +15,10 @@
     <section class="tools">
       <form class="options" onchange="onFormChange()">
         <select name="fontFamily" id="fontfamily">
-          <option value="sans">Default (Arial)</option>
-          <option value="monospace">MonoSpace</option>
-          <option value="sans-serif">Sans Serif</option>
+          <option value="Arial, Helvetica, sans-serif">Default (Arial)</option>
+          <option value="'Courier New', Courier, monospace">MonoSpace</option>
+          <option value="cursive">Cursive</option>
+          <option value="fantasy">Fantasy</option>
         </select>
         <input
           type="number"
@@ -126,17 +127,16 @@
             >format_align_right</label
           >
         </div>
-        <button type="button" class="material-icons" onclick="exportData()">
+        <button type="button" class="material-icons option-btn" onclick="exportData()">cloud_download</button>
+        <button type="button" class="material-icons option-btn" onclick="importData()">
           cloud_upload
         </button>
-        <button type="button" class="material-icons">cloud_download</button>
       </form>
       <div class="bottom-section">
         <div id="active-cell">null</div>
         <input
-          oninput="onChangeFontSize()"
           type="text"
-          class="expression"
+          id="expression"
           placeholder=" f(x) "
         />
       </div>
@@ -153,5 +153,6 @@
     <script src="./options.js"></script>
     <script src="./script.js"></script>
     <script src="./import-export.js"></script>
+    <script src="./expression.js"></script>
   </body>
 </html>

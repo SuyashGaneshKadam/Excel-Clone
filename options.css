@@ -3,9 +3,13 @@
     gap:10px;
     justify-content: center;
     align-items: center;
-    padding: 20px 10px;
+    padding: 20px;
     width: 90vw;
     margin: auto;
+    flex-wrap: wrap;
+    /* background-color: rgb(230, 244, 248);
+    border-radius: 100px;
+    margin-top: 10px; */
 }
 
 .options>input, .options>select{
@@ -16,6 +20,12 @@
 
 .options .material-icons{
     font-size: 30px;
+}
+
+.options > button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
 .option-btn{

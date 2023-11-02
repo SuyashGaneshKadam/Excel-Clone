@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    /* font-family:; */
 }
 
 #container{
@@ -15,7 +16,6 @@
     top: 0px;
     background-color: white;
     width: fit-content;
-    text-decoration: ;
 }
 
 .bottom{
@@ -40,8 +40,18 @@
 
 .cell{
     border: 1px solid #C4C7C5;
-    min-width: 100px;
+    min-width: 150px;
+    min-height: 35px;
     padding: 5px;
+    overflow: hidden;
+}
+
+.left-cell{
+    border: 1px solid #C4C7C5;
+    min-width: 35px;
+    min-height: 35px;
+    padding: 5px;
+    overflow: hidden;
 }
 
 .header-cell, .sno-cell{

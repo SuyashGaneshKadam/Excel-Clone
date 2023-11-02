@@ -7,3 +7,7 @@ function exportData(){
     link.download = "sheet.json";
     link.click();
 }
+
+function importData(){
+    
+}

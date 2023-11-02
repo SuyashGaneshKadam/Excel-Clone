@@ -8,7 +8,7 @@ let activeElement = null;
 const state = {};
 
 const defaultProperties = {
-  fontFamily: "sans",
+  fontFamily: "Arial, Helvetica, sans-serif",
   fontSize: 16,
   textColor: "#000000",
   bgColor: "#ffffff",
@@ -79,5 +79,5 @@ function makeChangesOnCurrentCell(styleObject){
     activeElement.style.fontStyle = styleObject.italic ? "italic" : "normal";
     activeElement.style.textDecoration = styleObject.strikethrough ? "line-through" : "none";
     // activeElement.style.textDecoration = styleObject.underline ? "underline" : "none";
-    console.log(activeElement.style.textDecoration);
+    // console.log(activeElement.style.textDecoration);
 }
