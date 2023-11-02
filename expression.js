@@ -4,7 +4,7 @@ expression.addEventListener("keyup",calculateExpression);
 function calculateExpression(e){
     if (!activeElement) {
         alert("Please select a cell to make changes");
-        form.reset();
+        expression.value = "";
         return;
     }
     if(e.keyCode === 13){

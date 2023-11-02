@@ -5,8 +5,9 @@
 }
 
 #container{
-    width: 100vw;
+    width: 95vw;
     height: 70vh;
+    margin: auto;
     overflow: scroll;
 }
 
@@ -40,8 +41,8 @@
 
 .cell{
     border: 1px solid #C4C7C5;
-    min-width: 150px;
-    min-height: 35px;
+    width: 150px;
+    height: 35px;
     padding: 5px;
     overflow: hidden;
 }
@@ -69,4 +70,8 @@
     /* width: fit-content; */
     z-index: 100;
     background-color: #e7e7e7;
+}
+
+#container::-webkit-scrollbar{
+    display: none;
 }
